@@ -179,7 +179,7 @@ function ChatPanel({ role, messages, onSend, onRecord, isRecording, theme }: any
         <p className="text-sm opacity-90">{isDoctor ? "Dr. Sarah Johnson" : "John Doe"}</p>
       </div>
 
-      <ScrollArea className="flex-1 p-4">
+      <div className="flex-1 overflow-y-auto p-4">
         <div className="space-y-4">
           {messages.map((msg: Message) => {
             // LOGIC: What does this person see?
@@ -197,7 +197,7 @@ function ChatPanel({ role, messages, onSend, onRecord, isRecording, theme }: any
             )
           })}
         </div>
-      </ScrollArea>
+      </div>
 
       <div className="p-4 bg-white border-t">
         <div className="flex gap-2">
